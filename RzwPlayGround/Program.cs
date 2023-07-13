@@ -10,4 +10,8 @@
 //var result = ReachestCustomers.ReachestCustomers.GetReachestCustomer(cash); 
 #endregion
 
+#region RansomeNote Done!
+//var result = RansomeNote.RansomeNote.IsContainNote("abcd", "cac"); 
+#endregion
+
 Console.ReadKey();

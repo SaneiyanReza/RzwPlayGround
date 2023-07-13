@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\RansomeNote\RansomeNote.csproj" />
     <ProjectReference Include="..\ReachestCustomers\ReachestCustomers.csproj" />
     <ProjectReference Include="..\SumOf1DArray\SumOf1DArray.csproj" />
   </ItemGroup>
