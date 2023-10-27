@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0_RzwPlayGround", "RzwPlayG
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SumOf1DArray", "SumOf1DArray\SumOf1DArray.csproj", "{7203216C-80F9-431F-ACA4-8FF593772DFE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReachestCustomers", "ReachestCustomers\ReachestCustomers.csproj", "{7354648D-5D5C-4406-8E7F-8151EAC103F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReachestCustomers", "ReachestCustomers\ReachestCustomers.csproj", "{7354648D-5D5C-4406-8E7F-8151EAC103F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RansomeNote", "RansomeNote\RansomeNote.csproj", "{3BBC8906-B3C9-4694-9758-AD2C9DAA61C9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RansomeNote", "RansomeNote\RansomeNote.csproj", "{3BBC8906-B3C9-4694-9758-AD2C9DAA61C9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercise", "Exercise\Exercise.csproj", "{CBEFEED9-23FC-4EDB-9FEE-329836990292}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{3BBC8906-B3C9-4694-9758-AD2C9DAA61C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BBC8906-B3C9-4694-9758-AD2C9DAA61C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BBC8906-B3C9-4694-9758-AD2C9DAA61C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBEFEED9-23FC-4EDB-9FEE-329836990292}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBEFEED9-23FC-4EDB-9FEE-329836990292}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBEFEED9-23FC-4EDB-9FEE-329836990292}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBEFEED9-23FC-4EDB-9FEE-329836990292}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
