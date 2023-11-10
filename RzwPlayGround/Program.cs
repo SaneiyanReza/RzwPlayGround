@@ -18,8 +18,6 @@
 
 #endregion
 
-// تعریف ماتریس A با اعداد صحیح
-// محاسبه توان سه ماتریس A
 using Exercise;
 using System.Diagnostics;
 
@@ -27,20 +25,43 @@ internal class Program
 {
     private static void Main(string[] args)
     {
+        int n = 1000;
+        int[,] matrix = new int[n, n];
+
+        Random random = new();
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                matrix[i, j] = random.Next(1, n);
+            }
+        }
+
         Stopwatch optimizedStopwatch = new();
 
         optimizedStopwatch.Start();
+
         EX4Compiler.CalculateOptimizedMatrix();
+
         optimizedStopwatch.Stop();
 
-        Stopwatch unOptimizedStopwatch = new();
+        Console.WriteLine($"calculate Optimized Matrix: {optimizedStopwatch.Elapsed}");
 
-        unOptimizedStopwatch.Start();
-        EX4Compiler.CalculateUnoptimizedMatrix();
-        unOptimizedStopwatch.Stop();
+        optimizedStopwatch.Restart();
 
-        Console.WriteLine($"optimize elapse time : {optimizedStopwatch.Elapsed} " +
-            $"unoptimize elapse time : {unOptimizedStopwatch.Elapsed}");
+        EX4Compiler.CalculateUnoptimizedMatrix(matrix, n);
+
+        optimizedStopwatch.Stop();
+
+        Console.WriteLine($"calculate Unoptimized Matrix: {optimizedStopwatch.Elapsed}");
+
+        optimizedStopwatch.Restart();
+
+        EX4Compiler.CalculateOptimizedMatrixByOpenMp(matrix, n);
+
+        optimizedStopwatch.Stop();
+
+        Console.WriteLine($"calculate Matrix By OpenMp: {optimizedStopwatch.Elapsed}");
 
         Console.ReadKey();
     }
