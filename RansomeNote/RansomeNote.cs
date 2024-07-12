@@ -25,15 +25,48 @@
         //}
 
         //second solution
+        //public static bool IsContainNote(string str1, string str2)
+        //{
+        //    Dictionary<char, int> keyValuePairs = str2
+        //        .GroupBy(x => x)
+        //        .ToDictionary(x => x.Key, y => y.Count());
+
+        //    for (int i = 0; i < str1.Length; i++)
+        //    {
+        //         keyValuePairs.TryGetValue(str1[i], out int specificValueOfKey);
+
+        //        if (specificValueOfKey > 0)
+        //        {
+        //            keyValuePairs[str1[i]]--;
+
+        //            continue;
+        //        }
+        //        return false;
+        //    }
+
+        //    return true;
+        //}
+
+        //third solution
         public static bool IsContainNote(string str1, string str2)
         {
-            Dictionary<char, int> keyValuePairs = str2
-                .GroupBy(x => x)
-                .ToDictionary(x => x.Key, y => y.Count());
+            Dictionary<char, int> keyValuePairs = [];
+
+            for (int i = 0; i < str2.Length; i++)
+            {
+                if (keyValuePairs.TryGetValue(str2[i], out int count))
+                {
+                    keyValuePairs[str2[i]]++;
+                }
+                else
+                {
+                    keyValuePairs.Add(str2[i], 1);
+                }
+            }
 
             for (int i = 0; i < str1.Length; i++)
             {
-                 keyValuePairs.TryGetValue(str1[i], out int specificValueOfKey);
+                keyValuePairs.TryGetValue(str1[i], out int specificValueOfKey);
 
                 if (specificValueOfKey > 0)
                 {

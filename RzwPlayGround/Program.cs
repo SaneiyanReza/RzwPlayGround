@@ -14,12 +14,16 @@
 
 #region RansomeNote Done!
 
-var result = RansomeNote.RansomeNote.IsContainNote("bg", "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj");
+//var result = RansomeNote.RansomeNote.IsContainNote("bg", "efjbdfbdgfjhhaiigfhbaejahgfbbgbjagbddfgdiaigdadhcfcj");
 
 #endregion
 
+#region countOddNumbers Done!
+
+var result = CountOddNumbers.CountOddNumbers.CountOdds(14, 17);
+
+#endregion
 
 Console.WriteLine(result);
-
 
 Console.ReadKey();

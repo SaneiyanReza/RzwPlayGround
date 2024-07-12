@@ -10,9 +10,11 @@
     <PackageReference Include="MKL.NET" Version="1.5.0" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CountOddNumbers\CountOddNumbers.csproj" />
     <ProjectReference Include="..\Exercise\Exercise.csproj" />
     <ProjectReference Include="..\RansomeNote\RansomeNote.csproj" />
     <ProjectReference Include="..\ReachestCustomers\ReachestCustomers.csproj" />
+    <ProjectReference Include="..\RomanToInteger\RomanToInteger.csproj" />
     <ProjectReference Include="..\SumOf1DArray\SumOf1DArray.csproj" />
   </ItemGroup>
 </Project>
