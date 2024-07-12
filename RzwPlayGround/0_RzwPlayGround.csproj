@@ -12,6 +12,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CountOddNumbers\CountOddNumbers.csproj" />
     <ProjectReference Include="..\Exercise\Exercise.csproj" />
+    <ProjectReference Include="..\KidsWithCandies\KidsWithCandies.csproj" />
     <ProjectReference Include="..\RansomeNote\RansomeNote.csproj" />
     <ProjectReference Include="..\ReachestCustomers\ReachestCustomers.csproj" />
     <ProjectReference Include="..\RomanToInteger\RomanToInteger.csproj" />

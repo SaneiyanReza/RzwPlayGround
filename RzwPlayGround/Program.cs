@@ -20,7 +20,13 @@
 
 #region countOddNumbers Done!
 
-var result = CountOddNumbers.CountOddNumbers.CountOdds(14, 17);
+//var result = CountOddNumbers.CountOddNumbers.CountOdds(14, 17);
+
+#endregion
+
+#region countOddNumbers Done!
+
+var result = KidsWithCandies.KidsWithCandies.KidsWithGreatestCandies([2, 3, 5, 1, 3], 3);
 
 #endregion
 
