@@ -15,31 +15,30 @@ namespace HamCode5
         {
             const int maxSize = 4;
 
-            var paddingDicts = stdin.Split(' ')
-                .Select((value, index) => new { Index = index, Value = maxSize - int.Parse(value) })
-                .OrderBy(x => x.Value)
-                .ToDictionary(item => item.Index, item => item.Value);
+         var paddingDicts = stdin.Split(' ')
+            .Select((value, index) => new { Index = index, Value = maxSize - int.Parse(value) })
+            .OrderBy(x => x.Value)
+            .ToDictionary(item => item.Index, item => item.Value);
 
-            for (int i = 0; i < paddingDicts.Count; i++)
+        for (int i = 0; i < paddingDicts.Count; i++)
+        {
+            if (paddingDicts[i] > 0)
             {
-                if (paddingDicts[i] > 0)
+                KeyValuePair<int, int> paddingMustTake = paddingDicts
+                    .FirstOrDefault(x => x.Key != i && x.Value >= maxSize - paddingDicts[i]);
+
+                if (paddingMustTake.Key == default && paddingMustTake.Value == default)
                 {
-                    KeyValuePair<int, int> paddingMustTake = paddingDicts
-                        .FirstOrDefault(x => x.Key != i && x.Value > 0);
-
-                    if (paddingMustTake.Key == default && paddingMustTake.Value == default)
-                    {
-                        paddingDicts[i] = 1;
-                    }
-
-                    if (maxSize - paddingDicts[paddingMustTake.Key] + maxSize - paddingDicts[i] < maxSize)
-                    {
-                        paddingDicts[i] = paddingDicts[paddingMustTake.Key] - paddingDicts[i];
-                        paddingDicts[paddingMustTake.Key] = paddingDicts[i] < 0 ? -paddingDicts[i] : 0;
-                        paddingDicts[i] = 0;
-                    }
+                    paddingDicts[i] = 1;
+                }
+                else
+                {
+                    paddingDicts[i] = paddingDicts[paddingMustTake.Key] - paddingDicts[i];
+                    paddingDicts[paddingMustTake.Key] = paddingDicts[i] < 0 ? -paddingDicts[i] : 0;
+                    paddingDicts[i] = 0;
                 }
             }
+        }
 
             int lastKeyPaddingSpace = paddingDicts
                 .Where(x => x.Value > 0)
